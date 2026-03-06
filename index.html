@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucio Richard's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Verdana', sans-serif;
+            line-height: 1.6;
+            color: darkcyan;
+        }
+        
+        header {
+            background: cadetblue;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            background: #ecf0f1;
+        }
+        
+        .section h2 {
+            color: darkcyan;
+            margin-bottom: 1rem;
+        }
+        
+        .project {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lucio Richard</h1>
+        <p>junior coder</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p> Hello ! , I am Lucio Richard, a passionate junior coder with a keen interest in AI technologies and web development.</p>
+            <p> I am currently in my 2nd year pursuing my diploma in Information Technology at Nanyang Polytechnic.</p>
+            <p> I am an interested life long learner so I am always eager to learn new skills and technologies.</p>
+        </section>
+        
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Library Management System</h3>
+                <p>A simple library management system built with Flask and Jinja2.</p>
+                <img src="images/image.png" alt="Library Management System Screenshot" style="width:100%; height:auto; border-radius: 8px;">
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: Luciorichard13@gmail.com</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgNxvWYaF3R2RVZZX_wsol1xJ3Vu5gUsOrTUPK2BPtoUKvyw/viewform?usp=publish-editor"> Link for google form</a>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Lucio Richard. All rights reserved.</p>
+    </footer>
+</body>
+</html>
