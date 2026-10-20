@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f6f5ef">
-    <meta name="description" content="Lucio Richard is an Information Technology student at Nanyang Polytechnic, exploring web development and AI.">
+    <meta name="description" content="Lucio Richard is an Information Technology diploma student at Nanyang Polytechnic, interested in software development and cybersecurity.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Lucio Richard — IT student & aspiring web developer">
-    <meta property="og:description" content="A curious IT student learning to make thoughtful things for the web.">
+    <meta property="og:title" content="Lucio Richard — Software Developer & Cybersecurity Enthusiast">
+    <meta property="og:description" content="Information Technology student interested in software development and cybersecurity.">
     <meta name="twitter:card" content="summary">
-    <title>Lucio Richard — IT student &amp; aspiring web developer</title>
+    <title>Lucio Richard — Software Developer &amp; Cybersecurity</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23d9f276'/%3E%3Ctext x='24' y='31' text-anchor='middle' font-family='Arial,sans-serif' font-size='19' font-weight='700' fill='%231b2925'%3ELR%3C/text%3E%3C/svg%3E">
     <style>
         :root {
@@ -178,7 +178,7 @@
         .hero h1 {
             max-width: 740px;
             margin: 0;
-            font-size: clamp(3.8rem, 8vw, 7.1rem);
+            font-size: clamp(3.5rem, 6.3vw, 5.7rem);
             font-weight: 600;
             letter-spacing: -0.085em;
             line-height: 0.98;
@@ -432,39 +432,19 @@
             margin-bottom: 0;
         }
 
-        .education-note {
+        .about-highlights {
             display: flex;
-            align-items: start;
-            gap: 1rem;
-            margin-top: 1.7rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid var(--line);
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin-top: 1.35rem;
         }
 
-        .education-marker {
-            display: grid;
-            width: 34px;
-            height: 34px;
-            flex: 0 0 auto;
-            place-items: center;
-            background: var(--lime);
-            font-family: var(--serif);
-            font-size: 0.85rem;
-        }
-
-        .education-note p {
-            margin: 0;
-        }
-
-        .education-note strong {
-            display: block;
-            color: var(--ink);
-            font-size: 0.88rem;
-        }
-
-        .education-note span {
-            color: var(--muted);
-            font-size: 0.82rem;
+        .about-highlights span {
+            padding: 0.34rem 0.65rem;
+            border: 1px solid var(--line);
+            color: var(--ink-soft);
+            font-size: 0.72rem;
+            font-weight: 600;
         }
 
         .skills-section {
@@ -481,7 +461,7 @@
         }
 
         .skill-group {
-            min-height: 176px;
+            min-height: 190px;
             padding: 1.5rem;
             background: var(--paper);
         }
@@ -497,9 +477,11 @@
 
         .skill-group p {
             margin: 1rem 0 0;
-            font-size: clamp(1.05rem, 2vw, 1.3rem);
-            font-weight: 650;
-            letter-spacing: -0.035em;
+            color: var(--ink-soft);
+            font-size: 0.98rem;
+            font-weight: 550;
+            line-height: 1.85;
+            letter-spacing: -0.015em;
         }
 
         .skill-group .learning-note {
@@ -514,106 +496,83 @@
             padding-block: 5.3rem 6rem;
         }
 
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.2rem;
+            margin-top: 3rem;
+        }
+
         .project-card {
             display: grid;
-            min-height: 420px;
-            grid-template-columns: 1.08fr 0.92fr;
-            margin-top: 3rem;
+            min-width: 0;
+            grid-template-rows: auto 1fr;
             background: var(--ink);
             color: var(--paper);
+        }
+
+        .project-card:first-child {
+            min-height: 390px;
+            grid-column: 1 / -1;
+            grid-template-columns: 1.08fr 0.92fr;
+            grid-template-rows: 1fr;
         }
 
         .project-visual {
             position: relative;
             display: grid;
-            min-height: 380px;
+            min-height: 235px;
             overflow: hidden;
             place-items: center;
             padding: 2rem;
-            background: #dfe5d0;
+            background: #dce4d1;
             color: var(--ink);
         }
 
         .project-visual::before,
         .project-visual::after {
             position: absolute;
-            width: 380px;
-            height: 380px;
+            width: 300px;
+            height: 300px;
             border: 1px solid rgb(27 41 37 / 12%);
             border-radius: 50%;
             content: "";
         }
 
         .project-visual::after {
-            width: 285px;
-            height: 285px;
+            width: 220px;
+            height: 220px;
         }
 
-        .library-art {
+        .project-art {
             position: relative;
             z-index: 1;
-            display: flex;
-            width: min(100%, 380px);
-            height: 265px;
-            align-items: end;
-            justify-content: center;
-            gap: 9px;
-            padding-bottom: 17px;
-            border-bottom: 1px solid rgb(27 41 37 / 50%);
+            width: min(100%, 410px);
+            color: inherit;
         }
 
-        .book {
-            position: relative;
-            display: flex;
-            width: 19%;
-            align-items: center;
-            justify-content: center;
-            padding: 0.6rem 0.2rem;
-            border: 1px solid rgb(27 41 37 / 28%);
-            color: var(--paper);
-            writing-mode: vertical-rl;
+        .project-art svg {
+            display: block;
+            width: 100%;
+            overflow: visible;
         }
 
-        .book::after {
-            position: absolute;
-            bottom: 11px;
-            width: 62%;
-            height: 1px;
-            background: rgb(255 255 255 / 55%);
-            content: "";
+        .project-visual--shop {
+            background: #ead6c6;
         }
 
-        .book span {
-            font-family: var(--serif);
-            font-size: 0.74rem;
-            letter-spacing: 0.035em;
-            transform: rotate(180deg);
+        .project-visual--audio {
+            background: #d5dce7;
         }
 
-        .book-one {
-            height: 72%;
-            background: #526b59;
+        .project-visual--scratch {
+            background: #f0dfb0;
         }
 
-        .book-two {
-            height: 91%;
-            background: #bd7352;
-        }
-
-        .book-three {
-            height: 81%;
-            background: #d7bd77;
-            color: var(--ink);
-        }
-
-        .book-four {
-            height: 99%;
-            background: #344f64;
-        }
-
-        .book-five {
-            height: 76%;
-            background: #a66e72;
+        .project-visual--shop::before,
+        .project-visual--audio::before,
+        .project-visual--scratch::before {
+            border-color: rgb(27 41 37 / 10%);
         }
 
         .project-stamp {
@@ -636,19 +595,18 @@
         .visual-caption {
             position: absolute;
             z-index: 1;
-            bottom: 1.3rem;
+            bottom: 0.85rem;
             left: 1.5rem;
             color: var(--ink-soft);
-            font-size: 0.65rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            font-size: 0.68rem;
+            font-style: italic;
         }
 
         .project-copy {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: clamp(2rem, 5vw, 4rem);
+            padding: clamp(1.5rem, 3vw, 2.5rem);
         }
 
         .project-copy .eyebrow {
@@ -656,18 +614,18 @@
         }
 
         .project-copy h3 {
-            margin: 1.15rem 0 0.9rem;
-            font-size: clamp(2rem, 3.8vw, 3.25rem);
+            margin: 0.8rem 0 0.65rem;
+            font-size: clamp(1.55rem, 2.5vw, 2.25rem);
             font-weight: 550;
             letter-spacing: -0.07em;
             line-height: 1.1;
         }
 
         .project-copy > p:not(.eyebrow) {
-            max-width: 390px;
+            max-width: 480px;
             margin: 0;
             color: #c5cdc5;
-            font-size: 0.94rem;
+            font-size: 0.88rem;
             line-height: 1.85;
         }
 
@@ -675,7 +633,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.55rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         .project-tags span {
@@ -687,8 +645,8 @@
         }
 
         .project-contribution {
-            margin-top: 1.5rem;
-            padding-top: 1rem;
+            margin-top: 1rem;
+            padding-top: 0.8rem;
             border-top: 1px solid #46534b;
             color: #c5cdc5;
             font-size: 0.78rem;
@@ -697,6 +655,149 @@
         .project-contribution strong {
             color: var(--lime);
             font-weight: 650;
+        }
+
+        .background-section {
+            padding-block: 5.3rem 6rem;
+        }
+
+        .background-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .background-column h3 {
+            margin: 0 0 1.25rem;
+            color: var(--muted);
+            font-size: 0.7rem;
+            font-weight: 750;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .background-column--spaced {
+            margin-top: 2.5rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 1.5rem 1.35rem;
+            border-left: 1px solid var(--line);
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+            border-left-color: transparent;
+        }
+
+        .timeline-item::before {
+            position: absolute;
+            top: 0.45rem;
+            left: -4px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--lime-dark);
+            content: "";
+        }
+
+        .timeline-item h4 {
+            margin: 0;
+            font-size: 1.08rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .timeline-item .timeline-meta {
+            margin: 0.25rem 0 0;
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .timeline-item > p:last-child {
+            margin: 0.75rem 0 0;
+            color: var(--ink-soft);
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .credential-list {
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .credential {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            padding: 1rem;
+            border: 1px solid var(--line);
+            background: rgb(255 255 255 / 22%);
+        }
+
+        .credential-mark {
+            display: grid;
+            width: 34px;
+            height: 34px;
+            flex: 0 0 auto;
+            place-items: center;
+            background: var(--lime);
+            font-family: var(--serif);
+            font-size: 0.9rem;
+        }
+
+        .credential strong {
+            display: block;
+            font-size: 0.84rem;
+            line-height: 1.45;
+        }
+
+        .credential span {
+            display: block;
+            margin-top: 0.2rem;
+            color: var(--muted);
+            font-size: 0.73rem;
+        }
+
+        .experience-entry {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.5rem 1rem;
+            align-items: baseline;
+        }
+
+        .experience-entry h4 {
+            margin: 0;
+            font-size: 1.15rem;
+            letter-spacing: -0.03em;
+        }
+
+        .experience-entry > span {
+            color: var(--muted);
+            font-size: 0.76rem;
+            text-align: right;
+        }
+
+        .experience-entry .timeline-meta {
+            grid-column: 1 / -1;
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.79rem;
+        }
+
+        .experience-entry ul {
+            grid-column: 1 / -1;
+            margin: 0.5rem 0 0;
+            padding-left: 1.1rem;
+            color: var(--ink-soft);
+            font-size: 0.85rem;
+            line-height: 1.85;
+        }
+
+        .experience-entry li + li {
+            margin-top: 0.45rem;
         }
 
         .contact-section {
@@ -803,11 +904,11 @@
                 gap: 2rem;
             }
 
-            .project-card {
-                grid-template-columns: 1fr 0.95fr;
+            .project-card:first-child {
+                grid-template-columns: 1.08fr 0.92fr;
             }
 
-            .project-visual {
+            .project-card:first-child .project-visual {
                 min-height: 390px;
             }
         }
@@ -851,7 +952,7 @@
 
             .hero h1 {
                 max-width: 490px;
-                font-size: clamp(3.65rem, 15vw, 5.5rem);
+                font-size: clamp(3.25rem, 13vw, 4.6rem);
             }
 
             .hero-intro {
@@ -915,6 +1016,7 @@
             .about-section,
             .skills-section,
             .projects-section,
+            .background-section,
             .contact-section {
                 padding-block: 4rem;
             }
@@ -945,21 +1047,39 @@
                 margin-top: 0.55rem;
             }
 
-            .project-card {
+            .project-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
                 margin-top: 2rem;
             }
 
-            .project-visual {
-                min-height: 310px;
+            .project-card {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
             }
 
-            .library-art {
-                height: 220px;
+            .project-card:first-child {
+                grid-column: auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+            }
+
+            .project-visual {
+                min-height: 245px;
+            }
+
+            .project-card:first-child .project-visual {
+                min-height: 270px;
             }
 
             .project-copy {
                 padding: 2rem 1.5rem;
+            }
+
+            .background-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                margin-top: 2rem;
             }
 
             .contact-copy h2 {
@@ -1019,6 +1139,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
             <a class="nav-contact" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
@@ -1026,14 +1147,14 @@
     <main id="main-content">
         <section class="hero page-shell" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow">IT student &nbsp;·&nbsp; aspiring web developer</p>
-                <h1 id="hero-title">Curious by nature. <span>Building for the web.</span></h1>
-                <p class="hero-intro">I’m Lucio — an Information Technology student who loves exploring how the web works and what thoughtful technology can make possible.</p>
+                <p class="eyebrow">Software development &nbsp;·&nbsp; cyber security</p>
+                <h1 id="hero-title">A software developer <span>with an interest in cyber security.</span></h1>
+                <p class="hero-intro">I’m Lucio, a resilient Diploma in Information Technology student at Nanyang Polytechnic seeking an entry-level developer or junior penetration tester role. I bring hands-on Python and web development experience, adaptability, and customer service skills developed in hospitality.</p>
                 <div class="hero-actions">
-                    <a class="button" href="#projects">Explore my work <span class="arrow" aria-hidden="true">↗</span></a>
+                    <a class="button" href="#projects">View my work <span class="arrow" aria-hidden="true">↗</span></a>
                     <a class="text-link" href="#contact">Get in touch <span class="arrow" aria-hidden="true">↗</span></a>
                 </div>
-                <p class="hero-note"><span aria-hidden="true"></span>Currently learning, making, and asking better questions.</p>
+                <p class="hero-note"><span aria-hidden="true"></span>Diploma in IT · Nanyang Polytechnic · 2024–2028</p>
             </div>
             <div class="hero-art" role="img" aria-label="A graphic self-portrait inspired by the process of learning and building">
                 <div class="art-ring" aria-hidden="true"></div>
@@ -1055,17 +1176,19 @@
 
         <section class="section about-section page-shell" id="about" aria-labelledby="about-title">
             <div class="section-heading">
-                <p class="section-index">01 / A little about me</p>
-                <h2 id="about-title">I like figuring out <em>how things work.</em></h2>
+                <p class="section-index">01 / Profile</p>
+                <h2 id="about-title">Building software. <em>Thinking about security.</em></h2>
             </div>
             <div class="about-content">
                 <span aria-hidden="true"></span>
                 <div class="about-copy">
-                    <p>I’m a second-year Information Technology diploma student at Nanyang Polytechnic, interested in web development and the possibilities of AI.</p>
-                    <p>I’m early in my journey, and that’s the part I enjoy: learning by making, staying curious, and turning new ideas into things that work.</p>
-                    <div class="education-note">
-                        <span class="education-marker" aria-hidden="true">N</span>
-                        <p><strong>Diploma in Information Technology</strong><span>Nanyang Polytechnic · Currently in year two</span></p>
+                    <p>I’m studying for a Diploma in Information Technology specialising in Cybersecurity at Nanyang Polytechnic. I’m interested in building useful software and understanding how to make digital systems more secure.</p>
+                    <p>Hospitality has taught me to work well with people, communicate clearly, and stay composed when things get busy. I’m adaptable in social settings, quick to learn, and bring the same attention to detail to technical work.</p>
+                    <div class="about-highlights" aria-label="Professional strengths">
+                        <span>Customer service</span>
+                        <span>Clear communication</span>
+                        <span>Teamwork under pressure</span>
+                        <span>English &amp; Tamil</span>
                     </div>
                 </div>
             </div>
@@ -1073,63 +1196,208 @@
 
         <section class="section skills-section page-shell" id="skills" aria-labelledby="skills-title">
             <div class="section-heading">
-                <p class="section-index">02 / Tools I’ve used</p>
-                <h2 id="skills-title">A growing <em>toolkit.</em></h2>
+                <p class="section-index">02 / Skills &amp; abilities</p>
+                <h2 id="skills-title">Tools, technology <em>&amp; people skills.</em></h2>
             </div>
             <div class="skills-grid">
                 <article class="skill-group">
-                    <h3>Frontend</h3>
-                    <p>HTML · CSS</p>
+                    <h3>Development</h3>
+                    <p>Python · React · Node.js · HTML · CSS · SQL</p>
                 </article>
                 <article class="skill-group">
-                    <h3>Backend</h3>
-                    <p>Python · Flask</p>
+                    <h3>Platforms &amp; tools</h3>
+                    <p>Flask · Git · AWS Web Services · Cisco Networking</p>
+                    <p class="learning-note">Also familiar with Power BI and Excel.</p>
                 </article>
                 <article class="skill-group">
-                    <h3>Templating</h3>
-                    <p>Jinja2</p>
+                    <h3>How I work</h3>
+                    <p>Clear communication · Teamwork · Attention to detail · Quick learning</p>
+                    <p class="learning-note">Comfortable working under pressure and explaining technical ideas clearly.</p>
                 </article>
             </div>
         </section>
 
         <section class="section projects-section page-shell" id="projects" aria-labelledby="projects-title">
             <div class="section-heading">
-                <p class="section-index">03 / Selected work</p>
-                <h2 id="projects-title">Learning through <em>building.</em></h2>
+                <p class="section-index">03 / Selected projects</p>
+                <h2 id="projects-title">Ideas brought to <em>life in code.</em></h2>
             </div>
-            <article class="project-card">
-                <div class="project-visual" role="img" aria-label="An original illustration of colorful books on a shelf, representing a library project">
-                    <div class="project-stamp" aria-hidden="true">read<br>more</div>
-                    <div class="library-art" aria-hidden="true">
-                        <div class="book book-one"><span>Small worlds</span></div>
-                        <div class="book book-two"><span>New chapters</span></div>
-                        <div class="book book-three"><span>Field notes</span></div>
-                        <div class="book book-four"><span>Open pages</span></div>
-                        <div class="book book-five"><span>Quiet hours</span></div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-visual" role="img" aria-label="Concept illustration showing a lift moving between floors">
+                        <div class="project-stamp" aria-hidden="true">01</div>
+                        <div class="project-art" aria-hidden="true">
+                            <svg viewBox="0 0 440 250" fill="none">
+                                <path d="M84 40v166h138V40H84Z" fill="#F6F5EF" stroke="#1B2925" stroke-width="2"/>
+                                <path d="M104 61h98v126h-98z" fill="#E8EADF" stroke="#1B2925" stroke-width="1.5"/>
+                                <path d="M112 83h82M112 112h82M112 141h82M112 170h82" stroke="#A6AD9D" stroke-width="1.5"/>
+                                <path d="M130 83v87M176 83v87" stroke="#C2C8B8" stroke-width="1.5"/>
+                                <path d="M152 155V96m0 0-9 10m9-10 9 10" stroke="#9AB33D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="135" y="113" width="34" height="39" rx="2" fill="#D9F276" stroke="#1B2925" stroke-width="1.5"/>
+                                <path d="M278 75h66m-66 42h47m-47 42h60" stroke="#1B2925" stroke-width="2"/>
+                                <circle cx="365" cy="75" r="12" fill="#D9F276" stroke="#1B2925" stroke-width="1.5"/>
+                                <circle cx="365" cy="117" r="12" fill="#F6F5EF" stroke="#1B2925" stroke-width="1.5"/>
+                                <circle cx="365" cy="159" r="12" fill="#F6F5EF" stroke="#1B2925" stroke-width="1.5"/>
+                                <path d="M362 75h6m-3-3v6m-3 39h6m-3-3v6m-3 39h6" stroke="#1B2925" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="visual-caption">Concept illustration · not a product screenshot</span>
                     </div>
-                    <span class="visual-caption">Original illustration · not a project screenshot</span>
-                </div>
-                <div class="project-copy">
-                    <p class="eyebrow">Learning project · 01</p>
-                    <h3>Library Management System</h3>
-                    <p>A simple library management system built with Flask and Jinja2 — a hands-on way to explore how a web application comes together.</p>
-                    <div class="project-tags" aria-label="Technologies used">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>Jinja2</span>
+                    <div class="project-copy">
+                        <p class="eyebrow">Full-stack web application</p>
+                        <h3>Lift Management Platform</h3>
+                        <p>A platform for managing lift information, built with a React front end and a Node.js back end.</p>
+                        <div class="project-tags" aria-label="Technologies used">
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                        <p class="project-contribution"><strong>My contribution</strong> · Designed the interface and server logic, from planning through to a working build.</p>
                     </div>
-                    <p class="project-contribution"><strong>My contribution</strong> · Building the project as part of my learning journey.</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-visual project-visual--shop" role="img" aria-label="Concept illustration of an online storefront">
+                        <div class="project-stamp" aria-hidden="true">02</div>
+                        <div class="project-art" aria-hidden="true">
+                            <svg viewBox="0 0 440 210" fill="none">
+                                <rect x="77" y="38" width="286" height="150" rx="3" fill="#F6F5EF" stroke="#1B2925" stroke-width="2"/>
+                                <path d="M77 70h286" stroke="#1B2925" stroke-width="1.5"/>
+                                <circle cx="96" cy="54" r="3" fill="#BD7352"/><circle cx="108" cy="54" r="3" fill="#D7BD77"/><circle cx="120" cy="54" r="3" fill="#526B59"/>
+                                <rect x="98" y="88" width="94" height="78" fill="#EAD6C6"/>
+                                <path d="M126 126v-12a19 19 0 0 1 38 0v12" stroke="#1B2925" stroke-width="2"/>
+                                <path d="M123 121h44l-4 31h-36l-4-31Z" fill="#D9F276" stroke="#1B2925" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M216 94h112m-112 13h82m-82 23h90" stroke="#48554E" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="216" y="145" width="62" height="20" fill="#1B2925"/><path d="M228 154h38" stroke="#F6F5EF" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="visual-caption">Concept illustration · not a product screenshot</span>
+                    </div>
+                    <div class="project-copy">
+                        <p class="eyebrow">Web application</p>
+                        <h3>E-commerce Web App</h3>
+                        <p>A multi-page shopping site with a Flask back end for browsing products and placing orders.</p>
+                        <div class="project-tags" aria-label="Technologies used">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>HTML</span>
+                        </div>
+                        <p class="project-contribution"><strong>My contribution</strong> · Built the app and practiced routing, templating, and organizing a multi-page experience.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-visual project-visual--audio" role="img" aria-label="Concept illustration of a video link being converted into an audio waveform">
+                        <div class="project-stamp" aria-hidden="true">03</div>
+                        <div class="project-art" aria-hidden="true">
+                            <svg viewBox="0 0 440 210" fill="none">
+                                <rect x="52" y="79" width="143" height="52" rx="4" fill="#F6F5EF" stroke="#1B2925" stroke-width="2"/>
+                                <circle cx="78" cy="105" r="11" fill="#BD7352"/><path d="m75 99 9 6-9 6v-12Z" fill="#F6F5EF"/>
+                                <path d="M101 99h77m-77 12h55" stroke="#89949A" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M208 105h37m0 0-9-9m9 9-9 9" stroke="#1B2925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="263" y="70" width="124" height="70" rx="4" fill="#F6F5EF" stroke="#1B2925" stroke-width="2"/>
+                                <path d="M280 105h6l6-15 9 32 9-25 8 16 7-8 7 8 8-18 9 21 8-11 9 0" stroke="#526B59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M290 159h70" stroke="#1B2925" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="visual-caption">Concept illustration · not a product screenshot</span>
+                    </div>
+                    <div class="project-copy">
+                        <p class="eyebrow">URL-to-audio web tool</p>
+                        <h3>URL2MP3 Converter</h3>
+                        <p>A Flask web tool that accepts a video URL and returns an audio file.</p>
+                        <div class="project-tags" aria-label="Technologies used">
+                            <span>Python</span>
+                            <span>Flask</span>
+                        </div>
+                        <p class="project-contribution"><strong>My contribution</strong> · Built the conversion workflow and handled user input and server-side file processing.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-visual project-visual--scratch" role="img" aria-label="Concept illustration of colorful Scratch programming blocks">
+                        <div class="project-stamp" aria-hidden="true">04</div>
+                        <div class="project-art" aria-hidden="true">
+                            <svg viewBox="0 0 440 210" fill="none">
+                                <path d="M92 42h204a9 9 0 0 1 9 9v15h-31v17h31v15h-52v16h52v24a9 9 0 0 1-9 9H92a9 9 0 0 1-9-9V51a9 9 0 0 1 9-9Z" fill="#F2A83B" stroke="#1B2925" stroke-width="2"/>
+                                <circle cx="116" cy="53" r="5" fill="#F0DFB0" stroke="#1B2925" stroke-width="1.5"/>
+                                <path d="M92 113h64a9 9 0 0 1 9 9v10h-23v16h23v10a9 9 0 0 1-9 9H92a9 9 0 0 1-9-9v-36a9 9 0 0 1 9-9Z" fill="#59B9D3" stroke="#1B2925" stroke-width="2"/>
+                                <circle cx="115" cy="124" r="5" fill="#F0DFB0" stroke="#1B2925" stroke-width="1.5"/>
+                                <path d="M225 106h129a9 9 0 0 1 9 9v13h-26v16h26v16a9 9 0 0 1-9 9H225a9 9 0 0 1-9-9v-45a9 9 0 0 1 9-9Z" fill="#8C72C7" stroke="#1B2925" stroke-width="2"/>
+                                <circle cx="248" cy="117" r="5" fill="#F0DFB0" stroke="#1B2925" stroke-width="1.5"/>
+                                <path d="M179 63h55m-27-27 27 27-27 27" stroke="#1B2925" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="visual-caption">Concept illustration · not a product screenshot</span>
+                    </div>
+                    <div class="project-copy">
+                        <p class="eyebrow">Early prototype</p>
+                        <h3>E-commerce App</h3>
+                        <p>An early store-app prototype made in Scratch, where I first explored application logic and user flow.</p>
+                        <div class="project-tags" aria-label="Technology used">
+                            <span>Scratch</span>
+                        </div>
+                        <p class="project-contribution"><strong>My contribution</strong> · Prototyped the app and explored how shoppers move through an online store.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section background-section page-shell" id="experience" aria-labelledby="experience-title">
+            <div class="section-heading">
+                <p class="section-index">04 / Education &amp; experience</p>
+                <h2 id="experience-title">Learning in class <em>and on the job.</em></h2>
+            </div>
+            <div class="background-grid">
+                <div>
+                    <div class="background-column">
+                        <h3>Education</h3>
+                        <div class="timeline-item">
+                            <h4>Diploma in Information Technology</h4>
+                            <p class="timeline-meta">Cybersecurity specialisation · Nanyang Polytechnic · Apr 2024–Mar 2028</p>
+                            <p>Coursework in programming, cloud computing, data analytics, business enterprise, and web development. Familiar with Power BI, Excel, AWS Web Services, and Cisco networking.</p>
+                        </div>
+                    </div>
+                    <div class="background-column background-column--spaced">
+                        <h3>Work experience</h3>
+                        <div class="timeline-item">
+                            <div class="experience-entry">
+                                <h4>Buffet Service</h4>
+                                <span>Sep 2025–Present</span>
+                                <p class="timeline-meta">Hospitality · Across many hotels</p>
+                                <ul>
+                                    <li>Serve guests in high-volume, time-pressured settings while staying accurate and courteous during peak hours.</li>
+                                    <li>Work with the team to keep stations stocked and service running on schedule.</li>
+                                    <li>Handle guest requests and complaints directly, strengthening communication and problem-solving skills.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </article>
+                <div class="background-column">
+                    <h3>Training &amp; certifications</h3>
+                    <div class="credential-list">
+                        <div class="credential">
+                            <span class="credential-mark" aria-hidden="true">C</span>
+                            <div>
+                                <strong>Introduction to Cybersecurity</strong>
+                                <span>Cisco</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <span class="credential-mark" aria-hidden="true">AI</span>
+                            <div>
+                                <strong>AI Fluency: Framework &amp; Foundations</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="section contact-section page-shell" id="contact" aria-labelledby="contact-title">
             <div class="contact-inner">
-                <p class="section-index">04 / Get in touch</p>
+                <p class="section-index">05 / Get in touch</p>
                 <div class="contact-copy">
-                    <h2 id="contact-title">Have a good <em>idea?</em></h2>
-                    <p>I’m always glad to connect with people who enjoy making thoughtful things. Drop me a note — I’d love to hear from you.</p>
-                    <a class="button" href="mailto:Luciorichard13@gmail.com">Email me <span class="arrow" aria-hidden="true">↗</span></a>
+                    <h2 id="contact-title">Let’s build something <em>secure.</em></h2>
+                    <p>I’m looking for an opportunity to grow as a developer or junior penetration tester. If you’re hiring or would like to connect, I’d be glad to hear from you.</p>
+                    <a class="button" href="mailto:luciorichard13@gmail">luciorichard13@gmail <span class="arrow" aria-hidden="true">↗</span></a>
                 </div>
             </div>
         </section>
